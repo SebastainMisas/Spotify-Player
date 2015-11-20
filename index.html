@@ -1,31 +1,42 @@
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="widget">
-		<div class="header">
-		<!-- Try adding/removing these classes: -->
-		<!-- disabled -->
-		<!-- playing -->
-		<div class="btn-play disabled"></div>
+	<head>
+		<meta charset="UTF-8">
+		<title>Spotify Player</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	    <script src="main.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<center>
+		<div class="search">
 
-		<div class="metadata">
-		  <p class="title">Hunger of The Pine</p>
-		  <p class="author">alt-J</p>
-
-		  <div class="seekbar">
-		    <progress value="5" max="30"></progress>
-		  </div>
+			<form class="js-search">
+				<label for="js-search-input"><h1>Spotify Player</h1></label><br>
+				<input type="text" class="js-search-input"><br>
+				<button type="submit">Search</button><br>
+			</form>			
 		</div>
-		</div>
-		<div class="cover">
-		<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+		</center>
+
+		<div class="widget">
+			<div class="header">
+				<div class="btn-play disabled"></div>
+				<div class="metadata">
+				  <p class="title">Hunger of The Pine</p>
+				  <p class="artist">alt-J</p>
+
+				  <div class="seekbar">
+				    <progress value="5" max="30"></progress>
+				  </div>
+				</div>
+			</div>
+			<div class="cover">
+				<img class="track-cover" src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+			</div>
+
+			<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 		</div>
 
-		<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
-	</div>
-
-</body>
+	</body>
 </html>
