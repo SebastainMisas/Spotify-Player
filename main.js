@@ -26,7 +26,7 @@ $(document).on("ready", function () {
 													 <p class="artist">' + track.artists[0].name + '</p>\
 															\
 													 <div class="seekbar">\
-													   <progress value="5" max="30"></progress>\
+													   <progress class="prog-bar" value="5" max="30"></progress>\
 													 </div>\
 												</div>\
 											</div>\
@@ -52,6 +52,14 @@ $(document).on("ready", function () {
 				       		button.toggleClass('playing')
 				            audio.trigger('play');
 				       	};
+				       	function printTime (event) {
+				       	  var progressbar = button.closest('.js-player-wrapper').find('.prog-bar')
+						  var current = audio.prop('currentTime');
+						  
+						progressbar.attr('value', current )
+						
+						};
+						audio.on('timeupdate', printTime)
 											  
 					});
 			},
